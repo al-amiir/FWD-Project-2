@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <h1>WEATHER APP</h1>
+    <p>SEARCH BY ZIP CODE</p>
+
+    <form id="zipForm">
+      <input type="number" id="zip" placeholder="Try 94040" />
+      <textarea
+        name=""
+        id="feelings"
+        cols="30"
+        rows="10"
+        placeholder="Enter Your Feelings"
+      ></textarea>
+      <button id="generate">Generate</button>
+    </form>
+    <div id="entryHolder">
+      <h3 id="cityName"></h3>
+      <table id="entryHolder_table"></table>
+    </div>
+  </body>
+</html>

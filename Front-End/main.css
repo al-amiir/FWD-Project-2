@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(180deg, #ebab00, #d00000, #6a040f, #000000);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+  color: wheat;
+  margin: 40px;
+  border-bottom: 1px solid;
+}
+h3 {
+  margin-block: 10px;
+}
+p {
+  font-size: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input {
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: #5f0511;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  margin: 10px;
+  width: 100%;
+}
+
+form textarea {
+  font-size: 16px;
+  border: 6px solid black;
+  border-radius: 4px;
+  background-color: #5f0511;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  width: 100%;
+}
+
+button {
+  padding: 5px;
+  border: 5px solid black;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    45deg,
+    #ffba08,
+    #e85d04,
+    #d00000,
+    #6a040f,
+    #370617
+  );
+  color: wheat;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#entryHolder {
+  width: 90%;
+  margin: 20px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid wheat;
+  color: wheat;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #3d1010;
+}
