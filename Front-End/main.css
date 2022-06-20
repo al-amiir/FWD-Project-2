@@ -57,8 +57,9 @@ form textarea {
   width: 100%;
 }
 
-button {
+#generate {
   padding: 5px;
+  width: 110px;
   border: 5px solid black;
   border-radius: 4px;
   background-image: linear-gradient(

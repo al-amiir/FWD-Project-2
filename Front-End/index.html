@@ -13,8 +13,16 @@
 
     <form id="zipForm">
       <p>SEARCH BY ZIP CODE</p>
-      <input type="number" id="zip" placeholder="Try 94040" />
-      <button id="generate">Generate</button>
+      <input type="number" id="zip" placeholder="Try 94040" required />
+      <textarea
+        id="inputFeelings"
+        type="text"
+        rows="4"
+        cols="50"
+        placeholder="Enter Your Feelings"
+        required
+      ></textarea>
+      <input type="submit" id="generate" value="Generate" />
     </form>
     <div id="entryHolder">
       <div id="cityName"></div>

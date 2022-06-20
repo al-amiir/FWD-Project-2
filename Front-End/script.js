@@ -1,11 +1,12 @@
 const apiKey = "5b29d3a944cf570aed7ff89539a2bce5";
-async function fetchWithZipCode(zipCode) {
+async function fetchWithZipCode(zipCode, feelings) {
   try {
     // Fetch Data From EndPoint
     let response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}&units=imperial`
+      `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}&units=metric`
     );
     let data = await response.json();
+    data = { ...data, feelings: feelings };
     // Send Data To Server
     await fetch("http://localhost:7000/addWeather", {
       method: "POST",
@@ -33,9 +34,7 @@ function handleUI(data) {
       data.temp
     )} Degrees`;
     // Feel
-    document.querySelector(
-      "#content"
-    ).textContent = `Feel: ${data.feeling} Degrees`;
+    document.querySelector("#content").textContent = `Feel: ${data.feeling} `;
     // Date
     document.querySelector("#date").textContent = dateText;
     document.querySelector("#error").textContent = "";
@@ -60,12 +59,12 @@ function handleUI(data) {
   }
 }
 
-document.querySelector("#generate").addEventListener("click", async (e) => {
+document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   let zipCode = document.querySelector("#zip").value;
-
+  let feelings = document.querySelector("#inputFeelings").value;
   // Fetch From End Point Then Send Data to sever
-  await fetchWithZipCode(zipCode);
+  await fetchWithZipCode(zipCode, feelings);
 
   // Fetch Data From Server
   let response = await fetch("http://localhost:7000/all");

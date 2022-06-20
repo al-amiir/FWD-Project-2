@@ -18,12 +18,13 @@ app.get("/", (req, res) => {
   res.send("index.html");
 });
 app.post("/addWeather", (req, res) => {
+  console.log(req.body);
   if (req.body.cod == 200) {
     projectData = {
       cityName: req.body.name,
       date: req.body.dt,
       temp: req.body.main.temp,
-      feeling: req.body.main.feels_like,
+      feeling: req.body.feelings,
     };
   } else {
     projectData = req.body;
