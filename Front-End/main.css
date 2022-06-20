@@ -78,28 +78,15 @@ button {
 #entryHolder {
   width: 90%;
   margin: 20px;
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 20px;
   color: wheat;
+}
+#entryHolder div {
+  margin: 5px;
+}
+#error {
   text-transform: capitalize;
+  font-size: 22px;
 }
-
-td,
-th {
-  border: 1px solid wheat;
-  color: wheat;
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  background-color: black;
-}
-
-tr:nth-child(even) {
-  background-color: #3d1010;
+#cityName {
+  font-size: 22px;
 }

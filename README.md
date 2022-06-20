@@ -7,14 +7,9 @@ This project requires to create an asynchronous web app that uses Web API and us
 
 ```
 npm install
-
 ```
 
-## Front-End
-
-Use Live-Server Extension Then Go Live
-
-## Back-End
+## Run Application
 
 ```
 node server.js
