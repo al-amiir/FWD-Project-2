@@ -71,5 +71,22 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   let data = await response.json();
 
   // Update UI
-  handleUI(data);
+  let dom = "";
+  for (let i = Object.keys(data).length - 1; i >= 0; i--) {
+    let singleData = data[Object.keys(data)[i]];
+    let date = new Date(singleData.date);
+    let dateText = `Date: ${date.getDay()}/${
+      date.getMonth() + 1
+    }/${date.getFullYear()}`;
+    console.log(singleData);
+    dom += `
+    <div class="entryHolder_container">
+      <div id="cityName">City Name: ${singleData.cityName}</div>
+      <div id="temp">Temp: ${singleData.temp}</div>
+      <div id="content">Feel: ${singleData.feeling}</div>
+      <div id="date">${dateText}</div>
+    </div>
+    `;
+  }
+  document.querySelector("#entryHolder").innerHTML = dom;
 });

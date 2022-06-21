@@ -35,7 +35,7 @@ form {
 }
 form input {
   padding: 10px;
-  border: 4px solid black;
+  border: 6px solid black;
   border-radius: 5px;
   background-color: #5f0511;
   color: white;
@@ -81,9 +81,14 @@ form textarea {
   margin: 20px;
   color: wheat;
 }
-#entryHolder div {
-  margin: 5px;
+.entryHolder_container {
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 2px;
+  width: fit-content;
+  margin-bottom: 15px;
 }
+
 #error {
   text-transform: capitalize;
   font-size: 22px;
